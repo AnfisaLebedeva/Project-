@@ -1,0 +1,233 @@
+.lightbox1 {
+    display: none;
+  }
+  .lightbox1 + label {  /* надпись "образец" */
+    border-bottom: 1px dashed;
+    cursor: zoom-in;
+  }
+  .lightbox1 + label + * {  /* коробка */
+    visibility: hidden;
+    position: fixed;
+    z-index: 11;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    background: rgba(0,0,0,.5);
+    text-align: center;
+    line-height: 100vh;
+  }
+  .lightbox1:checked + label + * {
+    visibility: visible;
+  }
+  .lightbox1 + label + * > * {  /* position: absolute; как-то странно себя ведёт в родителе с position: fixed;, поэтому была задействована ещё одна обёртка */
+    position: relative;
+  }
+  .lightbox1 + label + * > * > :first-child {  /* кликабельный фон */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: zoom-out;
+  }
+  .lightbox1 + label + * > * > :last-child {  /* блок с окном */
+    position: relative;
+    display: inline-block;
+    max-width: calc(100% - (8px + 2px)*2);
+    margin: 8px;
+    border: 2px solid rgb(51, 103, 153);
+    box-shadow: 0 0 0 8px rgba(255,255,255,.2);
+    background: #fff;
+    text-align: left;
+    line-height: normal;
+    vertical-align: middle;
+  }
+  .lightbox1 + label + * > * > :last-child > :first-child {  /* заголовок */
+    position: relative;
+    padding: .5em 4em .5em .5em;
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+    color: #fff;
+    background: linear-gradient(#669acc, #5589bb);
+  }
+  .lightbox1 + label + * > * > :last-child > :first-child label {  /* крестик "закрыть" */
+    position: absolute;
+    top: calc(.5em - 2px);
+    right: calc(.5em - 2px);
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .lightbox1 + label + * > * > :last-child > :last-child {  /* поле после заголовка */
+    padding: .5em;
+  }
+  .lightbox1 + label + * > * > :last-child > :last-child label {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+  }
+  .lightbox1 + label + * label > button {
+    position: relative;
+    z-index: -1;
+  }
+  
+  
+  input[type="search"],textarea
+  {
+     background: #FFFFFF;
+     margin:0 auto;
+  }
+  input[type="search"], textarea
+  {
+     width: 104%;
+     padding: 4px;
+     color: #07c28a !important;
+     font-size: 12px;
+     font-family: Dangrek, Arial, 'Arial Unicode MS', Helvetica, Sans-Serif;
+     font-weight: bold;
+     font-style: normal;
+  }
+  .sidebar{
+  background: url("https://static.vecteezy.com/system/resources/previews/000/149/825/original/colorful-candy-pattern-vectors.jpg");
+  }
+  .photo {
+    width: 440px;
+    height: 280px;  
+    border-radius: 0%;
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+    border:1px solid #ddd;    
+    border-radius: 50%;
+    box-shadow: 0 2px 5px #aaa;
+    margin: 2% auto;
+    top: 0; left: 0; bottom: 0; right: 0;  
+     }
+    img:hover {
+    border-radius: 3px;
+     }
+     
+  .imgblock {
+      position: relative;
+      display: inline-block;
+  }
+
+  .imgblock span {
+      background: #222;
+      color: #fff;
+      border-radius: 15px;
+      position: absolute;
+      right: 50;
+      bottom: 0px;
+      font-size: 18px;
+      padding: 5px 5px;
+  }
+  
+    .modal-standard .content-wrapper{margin-left:auto;margin-right:auto;width:980px}
+  @media only screen and (min-width: 1442px)
+  {.modal-standard .content-wrapper{margin-left:auto;margin-right:auto;width:980px}}
+  @media only screen and (max-width: 1068px)
+  {.modal-standard .content-wrapper{margin-left:auto;margin-right:auto;width:692px}}
+  @media only screen and (max-width: 735px)
+  {.modal-standard .content-wrapper{margin-left:auto;margin-right:auto;width:87.5%}}
+  .modal-standard .content-padding
+  {margin-left:auto;margin-right:auto;position:relative;z-index:1;padding:80px 8.33333%;background:white}
+  @media only screen and (max-width: 735px){.modal-standard .content-padding{padding-top:60px;padding-bottom:60px}}
+  @media only screen and (max-width: 735px){.modal-standard .modal-close{left:8.33333%}}.modal-full-viewport{background:white;padding:96px 0}
+  @media only screen and (max-width: 1068px){.modal-full-viewport{padding:76px 0}}
+  
+    .sidebar {
+      position:fixed;
+      top: 10.5%;
+    }
+  .container{
+    margin: 0 auto;
+    max-width: 1024px;
+  }
+  
+  .submit{
+    height: 50px;
+    position: relative;
+    border: 1px solid white;
+  }
+  
+  body {
+    width:100%; height:100%; margin:0;
+    background-image: url(https://dixnews.ru/wp-content/uploads/2016/02/marshmallow.jpg);
+    background-size: 100%;
+   }
+   h2 {
+    font-size: 25px; /* Размер шрифта в заголовке */
+    color: #000000; /* Цвет заголовка */
+    margin-top: 0; /* Отступ сверху */
+   }
+   .container {
+    width: 800px; /* Ширина слоя */
+    margin: 0 auto; /* Выравнивнить весь блок по центру */
+    background: rgb(231, 231, 188);
+   }
+   .header {
+    font-size: 38px; /* Размер текста в шапке */
+    text-align: center; /* Выравнивание текст шапки по центру */
+    padding: 3.32%; /* Отступы внутри блока шапки */
+    background-image: url(https://st2.depositphotos.com/1025801/6050/i/950/depositphotos_60502691-stock-photo-candies-jelly-candies-on-a.jpg);
+    background-size: 100%;
+    color: rgb(0, 0, 0); /* Цвет текста */
+   }
+   .sidebar {
+    margin-top: 3%;
+    width: 135px; /* Ширина блока */
+    padding: 3px; /* Отступы внутри левого блока */
+    float: left; /* Обтекание блока по левому краю */
+   }
+   .content {
+    margin-left: 145px; /* Отступ слева */
+    padding: 30px; /* Отступы внутри правого блока */
+    background: rgb(255, 255, 255);
+   }
+   .footer {
+    background: #07c28a; /* Цвет фона нижнего блока-подвала */
+    color: #fff; /* Цвет текста подвала */
+    padding: 5px; /* Отступы внутри блока */
+    clear:left; /* Отменяем действие float */
+    position:sticky;
+   }
+   #user {
+    width: 20px; /* Ширина поля в пикселах */
+   } 
+   .button {
+    background-color: #07c28a;
+    border: none;
+    color: white;
+    padding: 6px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    height: 35px;
+    position: relative;
+    border: 2px solid white;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+     }
+    .button1 {border-radius: 20px;}
+  
+    /* fieldset{width:25%;
+    float:left;}  */
+    
+.Absolute-Center{
+     width: 100%;
+     text-align: center;
+  }
+
+.teext {
+  font-size: 16px;
+  line-height: 0.2;
+}
